@@ -1,0 +1,44 @@
+<html>
+   <head>
+      <title>HTML5 Canvas Tag</title>
+   </head>
+   <body>
+       
+      <canvas id="newCanvas" width="600" height="500"></canvas>
+      <form>
+      Name:<input type="text" id="textbox" placeholder="your name"/>
+      <input type="date" id="textbox1"/>
+      </form>
+      <button type="button" onclick="getInputValue();">Show</button>
+      <br>
+      <script>
+          function getInputValue(){
+            var text1="Happy Birthday "+document.getElementById("textbox").value;
+            var text2=document.getElementById("textbox1").value;
+            ctx.strokeText(text1,155,190);
+            ctx.strokeText(text2,175,210);
+          }
+         var canvas = document.getElementById('newCanvas');
+         var ctx = canvas.getContext('2d');
+                 
+         ctx.fillStyle = "pink";
+         ctx.beginPath();
+         ctx.moveTo(208, 100);
+         ctx.lineTo(241, 170);
+         ctx.lineTo(318, 178.3);
+         ctx.lineTo(262, 231);
+         ctx.lineTo(275, 305);
+         ctx.lineTo(208, 270);
+         ctx.lineTo(141.2, 305);
+         ctx.lineTo(155, 231);
+         ctx.lineTo(101, 178);
+         ctx.lineTo(175, 168);
+         ctx.lineTo(208, 100);
+         ctx.closePath();
+         ctx.font="10px Monospace";
+         ctx.fill();
+         ctx.strokeText(text1,170,190);
+        
+      </script>
+   </body>
+</html>
